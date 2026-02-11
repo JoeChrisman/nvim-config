@@ -11,11 +11,21 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+
   {
     "vague-theme/vague.nvim",
     name = "vague",
     config = function()
       vim.cmd("colorscheme vague")
+    end,
+  },
+
+  {
+    'nvim-treesitter/nvim-treesitter',
+    lazy = false,
+    build = ':TSUpdate',
+    config = function()
+      require("config.treesitter")
     end,
   },
 })
