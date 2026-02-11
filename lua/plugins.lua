@@ -10,7 +10,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({
+local lazy = require ("lazy")
+lazy.setup({
 
   {
     "vague-theme/vague.nvim",
@@ -25,7 +26,21 @@ require("lazy").setup({
     lazy = false,
     build = ':TSUpdate',
     config = function()
-      require("config.treesitter")
+      require ("config.treesitter")
+    end,
+  },
+
+  { 
+    'nvim-telescope/telescope.nvim',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      { 
+        'nvim-telescope/telescope-fzf-native.nvim', 
+        build = 'make',
+      },
+    },
+    config = function()
+      require ("config.telescope")
     end,
   },
 })
