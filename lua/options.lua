@@ -13,11 +13,9 @@ vim.opt.tabstop = 2;
 vim.opt.shiftwidth = 2;
 
 vim.opt.signcolumn = "no"
-vim.opt.termguicolors = true
-vim.cmd("syntax on")
 
-vim.opt.undofile = true 
-vim.opt.swapfile = false 
+vim.opt.undofile = true
+vim.opt.swapfile = false
 vim.opt.backup = false
 
 vim.cmd([[filetype plugin indent on]])

@@ -17,7 +17,7 @@ lazy.setup({
     "vague-theme/vague.nvim",
     name = "vague",
     config = function()
-      vim.cmd("colorscheme vague")
+      require ("config.vague")
     end,
   },
 
