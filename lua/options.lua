@@ -1,7 +1,6 @@
 vim.g.mapleader = " "
 
 vim.opt.mouse = ""
-vim.opt.clipboard = "unnamedplus"
 
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -19,3 +18,6 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 
 vim.cmd([[filetype plugin indent on]])
+
+vim.keymap.set({ 'n', 'x' }, "<leader>y", '"+y', { desc = "[y]ank to system clipboard" })
+vim.keymap.set({ 'n', 'x' }, '<leader>p', '"+p', { desc = "[p]aste from system clipboard" })
