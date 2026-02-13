@@ -18,3 +18,5 @@ vim.cmd("syntax on")
 vim.opt.undofile = true 
 vim.opt.swapfile = false 
 vim.opt.backup = false
+
+vim.cmd([[filetype plugin indent on]])

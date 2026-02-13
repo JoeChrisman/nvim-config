@@ -30,12 +30,19 @@ lazy.setup({
     end,
   },
 
-  { 
+  {
+    'neovim/nvim-lspconfig',
+    config = function()
+      require ('config.lsp')
+    end
+  },
+
+  {
     'nvim-telescope/telescope.nvim',
     dependencies = {
       'nvim-lua/plenary.nvim',
-      { 
-        'nvim-telescope/telescope-fzf-native.nvim', 
+      {
+        'nvim-telescope/telescope-fzf-native.nvim',
         build = 'make',
       },
     },
