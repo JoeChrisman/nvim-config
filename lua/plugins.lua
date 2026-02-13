@@ -10,33 +10,56 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local lazy = require ("lazy")
+local lazy = require("lazy")
 lazy.setup({
-
+  -- theme
   {
     "vague-theme/vague.nvim",
     name = "vague",
     config = function()
-      require ("config.vague")
+      require("config.vague")
     end,
   },
 
+  -- ast parsing 
   {
     'nvim-treesitter/nvim-treesitter',
     lazy = false,
     build = ':TSUpdate',
     config = function()
-      require ("config.treesitter")
+      require("config.treesitter")
+    end,
+  },
+
+  -- lsp integration
+  {
+    'neovim/nvim-lspconfig',
+    config = function()
+      require('config.lsp')
+    end
+  },
+
+  -- autocomplete with lsp, buffer, and file system
+  {
+    "hrsh7th/nvim-cmp",
+    config = function()
+      require("config.cmp")
     end,
   },
 
   {
-    'neovim/nvim-lspconfig',
-    config = function()
-      require ('config.lsp')
-    end
+    "hrsh7th/cmp-nvim-lsp"
   },
 
+  {
+    "hrsh7th/cmp-buffer"
+  },
+
+  {
+    "hrsh7th/cmp-path"
+  },
+
+  -- git integration
   {
     "lewis6991/gitsigns.nvim",
     config = function()
@@ -44,6 +67,7 @@ lazy.setup({
     end,
   },
 
+  -- fuzzy finder
   {
     'nvim-telescope/telescope.nvim',
     dependencies = {
@@ -54,7 +78,7 @@ lazy.setup({
       },
     },
     config = function()
-      require ("config.telescope")
+      require("config.telescope")
     end,
   },
 })
