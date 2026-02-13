@@ -21,3 +21,7 @@ vim.cmd([[filetype plugin indent on]])
 
 vim.keymap.set({ 'n', 'x' }, "<leader>y", '"+y', { desc = "[y]ank to system clipboard" })
 vim.keymap.set({ 'n', 'x' }, '<leader>p', '"+p', { desc = "[p]aste from system clipboard" })
+
+vim.opt.pumheight = 8
+vim.opt.winborder = "rounded"
+vim.opt.termguicolors = true

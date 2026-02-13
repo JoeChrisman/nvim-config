@@ -21,7 +21,7 @@ lazy.setup({
     end,
   },
 
-  -- ast parsing 
+  -- ast parsing
   {
     'nvim-treesitter/nvim-treesitter',
     lazy = false,
@@ -57,6 +57,14 @@ lazy.setup({
 
   {
     "hrsh7th/cmp-path"
+  },
+
+  {
+    'L3MON4D3/LuaSnip'
+  },
+
+  {
+    'saadparwaiz1/cmp_luasnip'
   },
 
   -- git integration
