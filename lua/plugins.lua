@@ -38,6 +38,13 @@ lazy.setup({
   },
 
   {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require("config.gitsigns")
+    end,
+  },
+
+  {
     'nvim-telescope/telescope.nvim',
     dependencies = {
       'nvim-lua/plenary.nvim',

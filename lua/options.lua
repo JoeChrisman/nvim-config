@@ -12,6 +12,7 @@ vim.opt.expandtab = true;
 vim.opt.tabstop = 2;
 vim.opt.shiftwidth = 2;
 
+vim.opt.signcolumn = "no"
 vim.opt.termguicolors = true
 vim.cmd("syntax on")
 
