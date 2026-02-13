@@ -1,6 +1,8 @@
-vim.cmd("colorscheme vague")
+local vague = require ("vague")
+
+vague.setup({
+  transparent = true,
+})
 
 vim.opt.termguicolors = true
-
-vim.cmd([[highlight Normal guibg=NONE ctermbg=NONE]])
-vim.cmd([[highlight NormalNC guibg=NONE ctermbg=NONE]])
+vim.cmd("colorscheme vague")
