@@ -89,4 +89,11 @@ lazy.setup({
       require("config.telescope")
     end,
   },
+  -- landing page
+  {
+    "goolord/alpha-nvim",
+    config = function()
+      require("config.alpha")
+    end,
+  },
 })
